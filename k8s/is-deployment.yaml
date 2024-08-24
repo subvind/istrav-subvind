@@ -15,6 +15,7 @@ spec:
     spec:
       containers:
         - name: istrav-subvind
-          image: travy504/istrav-subvind
+          image: travy504/istrav-subvind:latest
+          imagePullPolicy: Always
           ports:
             - containerPort: 1337
