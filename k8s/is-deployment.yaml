@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: is-deployment
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: istrav-subvind
+  template:
+    metadata:
+      labels:
+        app: istrav-subvind
+    spec:
+      containers:
+        - name: istrav-subvind
+          image: travy504/istrav-subvind
+          ports:
+            - containerPort: 1337
